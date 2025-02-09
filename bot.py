@@ -11,12 +11,12 @@ from aiogram.enums.parse_mode import ParseMode
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(os.getenv("TOKEN"))
+bot = Bot("8165843151:AAHSypvP2GMR5sz6Pl7Y9_pjShRsavFmc60")
 dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
-    webAppInfo = types.WebAppInfo(url="your-webapp-url")
+    webAppInfo = types.WebAppInfo(url="https://mini-app-tg-three.vercel.app/")
     builder = ReplyKeyboardBuilder()
     builder.add(types.KeyboardButton(text='Отправить данные', web_app=webAppInfo))
     

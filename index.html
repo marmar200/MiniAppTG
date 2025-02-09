@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ab! Quidem aliquam deserunt doloremque dolorum obcaecati delectus consequuntur rerum. Eaque exercitationem earum voluptas vero dolorem obcaecati dolor eum! Accusantium, repudiandae.</h1>
+    <div class="Main">
+        <h1>Тестовое приложение</h1>
+        <p></p>
+        <button class="btn f-btn">Тест отправки данных</button>
+    </div>
+    <form class="test-form">    
+        <input type="text" placeholder="Введите заголовок" class="title-inp">
+        <input type="text" placeholder="Введите описание" class="desc-inp">
+        <input type="text" placeholder="Введите текст" class="text-inp">
+        <button class="btn s-btn">Отправить</button>
+    </form>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
