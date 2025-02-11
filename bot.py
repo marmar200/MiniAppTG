@@ -17,10 +17,26 @@ dp = Dispatcher()
 @dp.message(CommandStart())
 async def start(message: types.Message):
     webAppInfo = types.WebAppInfo(url="https://mini-app-tg-three.vercel.app/")
-    builder = ReplyKeyboardBuilder()
-    builder.add(types.KeyboardButton(text='Отправить данные', web_app=webAppInfo))
+    kb_list = [
+        [types.KeyboardButton(text='📖 Наш канал'), types.KeyboardButton(text='🎰 Рулетка', web_app=webAppInfo)],
+        [types.KeyboardButton(text='💵 Заказать выплату'), types.KeyboardButton(text='💳 Пополнение')]
+    ]
+
+    builder = types.ReplyKeyboardMarkup(
+        keyboard=kb_list,
+        resize_keyboard=True,
+        one_time_keyboard=False,
+        input_field_placeholder='Воспользуйтесь меню'
+    )
     
-    await message.answer(text='Привет!', reply_markup=builder.as_markup())
+    await message.answer(text='Привет!', reply_markup=builder)
+
+@dp.message(F.text.contains('Наш канал'))
+async def process_command_1(message: types.Message):
+    inline_kb = [
+        [types.InlineKeyboardButton(text='Канал тут!', url='https://habr.com')]
+    ]
+    await message.reply("Первая инлайн кнопка" , reply_markup=types.InlineKeyboardMarkup(inline_keyboard=inline_kb))
 
 @dp.message(F.content_type == ContentType.WEB_APP_DATA)
 async def parse_data(message: types.Message):

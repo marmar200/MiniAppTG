@@ -2,25 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <title>Двойная рулетка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="Main">
-        <h1>Тестовое приложение</h1>
-        <p></p>
-        <button class="btn f-btn">Тест отправки данных</button>
+    <div class="compsoul-body">
+        <input class="compsoul-roulette-checkbox hidden" id="compsoul-roulette-checkbox" type="button" onclick="spin()" name="compsoul-roulette-checkbox">
+        <label class="compsoul-roulette-label" for="compsoul-roulette-checkbox"></label>
+        <div class="compsoul-roulette">
+            <ul class="roulette-list" id="roulet">
+                <li class="roulette-item"><span>1000 ₽</span></li>
+                <li class="roulette-item"><span>2000 ₽</span></li>
+                <li class="roulette-item"><span>5000 ₽</span></li>
+                <li class="roulette-item"><span>0 ₽</span></li>
+                <li class="roulette-item"><span>500 ₽</span></li>
+                <li class="roulette-item"><span>3000 ₽</span></li>
+                <li class="roulette-item"><span>0 ₽</span></li>
+                <li class="roulette-item"><span>10000 ₽</span></li>
+                <li class="roulette-item"><span>0 ₽</span></li>
+                <li class="roulette-item"><span>3000 ₽</span></li>
+                <li class="roulette-item"><span>500 ₽</span></li>
+                <li class="roulette-item"><span>2000 ₽</span></li>
+                <li class="roulette-item"><span>5000 ₽</span></li>
+                <li class="roulette-item"><span>0 ₽</span></li>
+                <li class="roulette-item"><span>2000 ₽</span></li>
+                <li class="roulette-item"><span>0 ₽</span></li>
+            </ul>
+            <div class="roulette-marker">
+            </div>
+        </div>
     </div>
-    <form class="test-form">    
-        <input type="text" placeholder="Введите заголовок" class="title-inp">
-        <input type="text" placeholder="Введите описание" class="desc-inp">
-        <input type="text" placeholder="Введите текст" class="text-inp">
-        <button class="btn s-btn">Отправить</button>
-    </form>
-
+    <div class="container-buttons">
+        <div class="counter-spins">
+            <img src="img/miniRoulet.svg" alt="">
+            0 Вращений
+        </div>
+        <div class="buttons-collection">
+            <div class="surprise">
+                <div class="surprise-container">
+                    <span class="text"><img src="img/giftIcon.svg" alt=""> Подарок</span>
+                    <a href="" class="get">Получить</a>
+                </div>
+            </div>
+            <div class="surprise">
+                <div class="surprise-container">
+                    <span class="text"><img src="img/giftsIcon.svg" alt="" style="width: 1.2em;"> Коллекция призов</span>
+                    <a href="" class="get">Посмотреть</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
     <script src="js/script.js"></script>
 </body>
 </html>
